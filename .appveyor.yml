@@ -40,7 +40,7 @@ test_script:
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo
-  - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\new\share\perl6\site\bin;%PATH%
+  - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\rakudo-new\share\perl6\site\bin;%PATH%
   - cd zef
   - perl6 -I. bin/zef install .
   - zef install App::Mi6 App::Prove6
