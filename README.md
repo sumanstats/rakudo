@@ -1,6 +1,7 @@
 # Rakudo interpreter for raku programming language
 
 [![raku](https://img.shields.io/badge/raku-v6.d-blue.svg)](https://raku.org/)
+[![Build Status](https://travis-ci.com/sumanstats/rakudo.svg?branch=master)](https://travis-ci.com/sumanstats/rakudo)
 
 
 
@@ -8,8 +9,8 @@ Build two images in dockerhub: [offical release of rakudo](https://hub.docker.co
 
 | Docker Image Name | Description |  License |
 |-------------------|--------------|----------|
-|[![rakudo-daily](https://img.shields.io/badge/rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo:daily) | Builds rakudo image directly from github daily | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-|[![rakudo-latest](https://img.shields.io/badge/rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo:latest) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+|[![rakudo-daily](https://img.shields.io/badge/rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image directly from github daily | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+|[![rakudo-latest](https://img.shields.io/badge/rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 
 
 
@@ -17,6 +18,10 @@ Both the images contain Rakudo interpreter along with module manager `zef`, raku
 
 It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
 
+
+To run an image interactively, the command is:
+
+`docker run -it sumankhanal/rakudo:latest bash`.
 
 To build a raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
 
