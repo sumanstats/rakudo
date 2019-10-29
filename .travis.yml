@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t sumankhanal/rakudo:daily rakudo-daily
+  - docker build -t sumankhanal/rakudo:latest rakudo-latest
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push sumankhanal/rakudo:daily
+  - docker push sumankhanal/rakudo:latest
