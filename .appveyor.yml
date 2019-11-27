@@ -14,14 +14,14 @@ install:
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
 
 build_script:
-  - wget https://github.com/rakudo/rakudo/releases/download/2019.07.1/rakudo-2019.07.1.tar.gz && tar -xzf rakudo-2019.07.1.tar.gz
-  - ren rakudo-2019.07.1 rakudo-source
+  - wget https://github.com/rakudo/rakudo/releases/download/2019.11/rakudo-2019.11.tar.gz && tar -xzf rakudo-2019.11.tar.gz
+  - ren rakudo-2019.11 rakudo-source
   - mkdir rakudo-old
   - cd rakudo-source/
   - perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-old
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
-  - rm -rf rakudo-source rakudo-2019.07.1.tar.gz
+  - rm -rf rakudo-source rakudo-2019.11.tar.gz
   - SET PATH=C:\projects\rakudo\rakudo-old\bin;C:\projects\rakudo\rakudo-old\share\perl6\site\bin;%PATH%
   - git clone https://github.com/ugexe/zef.git
   - cd zef
