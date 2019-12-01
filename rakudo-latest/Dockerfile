@@ -3,7 +3,7 @@ FROM debian:sid
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PANDOC=2.7.3 \
-    RAKUDO=2019.07
+    RAKUDO=2019.11
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
@@ -18,7 +18,7 @@ RUN buildDeps="gcc \
     && apt-get install -y git nano curl \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir rakudo \
-    && wget -O rakudo.tar.gz https://github.com/rakudo/rakudo/releases/download/${RAKUDO}.1/rakudo-${RAKUDO}.1.tar.gz \
+    && wget -O rakudo.tar.gz https://github.com/rakudo/rakudo/releases/download/${RAKUDO}/rakudo-${RAKUDO}.tar.gz \
     && tar xzf rakudo.tar.gz --strip-components=1 -C rakudo \
     && ( \
         cd rakudo \
@@ -36,4 +36,4 @@ RUN buildDeps="gcc \
     
  #--no-install-recommends  
    
-CMD ["perl6", "--version"]
+CMD ["raku", "--version"]
