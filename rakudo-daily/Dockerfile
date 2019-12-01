@@ -35,4 +35,4 @@ RUN buildDeps="gcc \
 
 #For raku testing run ===> $ prove6 --lib t/
     
-CMD ["perl6", "--version"]
+CMD ["raku", "--version"]
