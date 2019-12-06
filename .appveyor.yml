@@ -22,6 +22,9 @@ build_script:
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo-source rakudo-2019.11.tar.gz
+  - cp C:\strawberry\perl\bin\libgcc_s_sjlj-1.dll C:\projects\rakudo\rakudo-old\bin
+  - cp C:\strawberry\perl\bin\libwinpthread-1.dll C:\projects\rakudo\rakudo-old\bin
+  - cp C:\strawberry\perl\bin\libgcc_s_seh-1.dll C:\projects\rakudo\rakudo-old\bin
   - SET PATH=C:\projects\rakudo\rakudo-old\bin;C:\projects\rakudo\rakudo-old\share\perl6\site\bin;%PATH%
   - git clone https://github.com/ugexe/zef.git
   - cd zef
@@ -40,6 +43,9 @@ test_script:
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo
+  - cp C:\strawberry\perl\bin\libgcc_s_sjlj-1.dll C:\projects\rakudo\rakudo-new\bin
+  - cp C:\strawberry\perl\bin\libwinpthread-1.dll C:\projects\rakudo\rakudo-new\bin
+  - cp C:\strawberry\perl\bin\libgcc_s_seh-1.dll C:\projects\rakudo\rakudo-new\bin
   - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\rakudo-new\share\perl6\site\bin;%PATH%
   - cd zef
   - perl6 -I. bin/zef install .
