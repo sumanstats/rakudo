@@ -9,7 +9,7 @@ branches:
 install:
   - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"'
 #  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
-  - appveyor-retry choco install strawberryperl --version 5.20.1.1 --allow-empty-checksums
+  - appveyor-retry choco install strawberryperl --allow-empty-checksums
   - appveyor-retry choco install innosetup wget
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
 
