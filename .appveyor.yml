@@ -28,7 +28,7 @@ build_script:
   - git clone https://github.com/ugexe/zef.git
   - cd zef
   - perl6 -I. bin/zef install .
-  - zef install Linenoise App::Mi6 App::Prove6
+  - zef install App::Mi6 App::Prove6
   #zef stuff here
   - cd ..
   - 7z a rakudo-latest-x86_64(JIT).zip ./rakudo-old/*
@@ -47,7 +47,7 @@ test_script:
   - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\rakudo-new\share\perl6\site\bin;%PATH%
   - cd zef
   - perl6 -I. bin/zef install .
-  - zef install Linenoise App::Mi6 App::Prove6
+  - zef install App::Mi6 App::Prove6
   #zef stuff here
   - cd ..
   - 7z a rakudo-daily-x86_64(JIT).zip ./rakudo-new/*
