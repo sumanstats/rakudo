@@ -1,4 +1,5 @@
 version: 1.0.{build}
+
 image: Visual Studio 2019
 
 branches:
@@ -11,17 +12,15 @@ install:
 #  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
   - appveyor-retry choco install strawberryperl --allow-empty-checksums
   - appveyor-retry choco install innosetup wget
- 
-before_build:
-  - SET PATH=C:\msys64\usr\bin;C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\bin;C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
- 
+  - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
+
 build_script:
   - wget https://github.com/rakudo/rakudo/releases/download/2019.11/rakudo-2019.11.tar.gz && tar -xzf rakudo-2019.11.tar.gz
   - ren rakudo-2019.11 rakudo-source
   - mkdir rakudo-old
   - cd rakudo-source/
   - perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-old
-  - gmake install
+  - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo-source rakudo-2019.11.tar.gz
   - cp C:\strawberry\perl\bin\libwinpthread-1.dll C:\projects\rakudo\rakudo-old\bin
@@ -36,3 +35,43 @@ build_script:
   - 7z a rakudo-latest-x86_64(JIT).zip ./rakudo-old/*
   - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-latest.iss
     
+test_script:
+  - git clone https://github.com/rakudo/rakudo.git
+  - mkdir rakudo-new
+  - cd rakudo
+  - perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-new
+  - nmake install
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - rm -rf rakudo
+  - cp C:\strawberry\perl\bin\libwinpthread-1.dll C:\projects\rakudo\rakudo-new\bin
+  - cp C:\strawberry\perl\bin\libgcc_s_seh-1.dll C:\projects\rakudo\rakudo-new\bin
+  - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\rakudo-new\share\perl6\site\bin;%PATH%
+  - cd zef
+  - perl6 -I. bin/zef install .
+  - zef install App::Mi6 App::Prove6
+  #zef stuff here
+  - cd ..
+  - 7z a rakudo-daily-x86_64(JIT).zip ./rakudo-new/*
+  - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-daily.iss
+
+artifacts:
+  - path: 'rakudo-latest-x86_64(JIT).zip'
+    name: rakudo-latest
+  - path: 'rakudo-latest-x86_64(JIT).exe'
+    name: rakudo-latest-installer
+  - path: 'rakudo-daily-x86_64(JIT).zip'
+    name: rakudo-daily
+  - path: 'rakudo-daily-x86_64(JIT).exe'
+    name: rakudo-daily-installer
+
+deploy:
+  release: Rakudo latest and daily
+  description: 'zip and executable version of rakudo latest and daily'
+  provider: GitHub
+  auth_token:
+    secure: hy0QQSh7MfmaPRkoz382B7rQ4gkgfWlh0n2vfM9Lh0DU7ZidW/RQwo3MZSZJlpCh
+  artifact: rakudo-latest, rakudo-latest-installer, rakudo-daily, rakudo-daily-installer  # upload all NuGet packages to release assets
+  draft: true
+  prerelease: false
+  on:
+    branch: master    
