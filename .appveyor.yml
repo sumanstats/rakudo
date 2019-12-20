@@ -65,13 +65,15 @@ artifacts:
     name: rakudo-daily-installer
 
 deploy:
+  tag: 0.01
   release: Rakudo latest and daily
-  description: 'zip and executable version of rakudo latest and daily'
+  description: 'zip and executable version of rakudo latest-2019.11 and daily'
   provider: GitHub
   auth_token:
     secure: hy0QQSh7MfmaPRkoz382B7rQ4gkgfWlh0n2vfM9Lh0DU7ZidW/RQwo3MZSZJlpCh
   artifact: rakudo-latest, rakudo-latest-installer, rakudo-daily, rakudo-daily-installer  # upload all NuGet packages to release assets
-  draft: true
+  draft: false
   prerelease: false
+  force_update: true
   on:
     branch: master    
