@@ -22,7 +22,7 @@ RUN buildDeps="gcc \
     && tar xzf rakudo.tar.gz --strip-components=1 -C rakudo \
     && ( \
         cd rakudo \
-        && perl Configure.pl --prefix=/usr --gen-moar --backends=moar \
+        && perl Configure.pl --prefix=/usr --gen-moar --backends=moar --relocatable \
         && make && make install \
     ) \
     && rm -rf rakudo rakudo.tar.gz \
