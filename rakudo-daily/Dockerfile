@@ -21,7 +21,7 @@ RUN buildDeps="gcc \
     && git clone https://github.com/rakudo/rakudo.git \
     && ( \
         cd rakudo \
-        && perl Configure.pl --prefix=/usr --gen-moar --backends=moar \
+        && perl Configure.pl --prefix=/usr --gen-moar --backends=moar --relocatable \
         && make && make install \
     ) \
     && rm -rf rakudo \
