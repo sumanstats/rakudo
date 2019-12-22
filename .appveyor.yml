@@ -19,7 +19,7 @@ build_script:
   - ren rakudo-2019.11 rakudo-source
   - mkdir rakudo-old
   - cd rakudo-source/
-  - perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-old
+  - perl Configure.pl --gen-moar --gen-nqp --backends=moar --relocatable --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-old
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo-source rakudo-2019.11.tar.gz
@@ -37,7 +37,7 @@ test_script:
   - git clone https://github.com/rakudo/rakudo.git
   - mkdir rakudo-new
   - cd rakudo
-  - perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-new
+  - perl Configure.pl --gen-moar --gen-nqp --backends=moar --relocatable --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-new
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo
