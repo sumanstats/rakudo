@@ -1,9 +1,11 @@
 FROM debian:sid
 
-ENV LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8 \
+ENV LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8 \
+    TERM=xterm \
     PANDOC=2.7.3 \
     RAKUDO=2019.11
+
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
