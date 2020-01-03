@@ -26,7 +26,7 @@ build_script:
   - SET PATH=C:\projects\rakudo\rakudo-old\bin;C:\projects\rakudo\rakudo-old\share\perl6\site\bin;%PATH%
   - git clone https://github.com/ugexe/zef.git
   - cd zef
-  - perl6 -I. bin/zef install .
+  - raku -I. bin/zef install .
   - zef install App::Mi6 App::Prove6
   #zef stuff here
   - cd ..
@@ -43,7 +43,7 @@ test_script:
   - rm -rf rakudo
   - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\rakudo-new\share\perl6\site\bin;%PATH%
   - cd zef
-  - perl6 -I. bin/zef install .
+  - raku -I. bin/zef install .
   - zef install App::Mi6 App::Prove6
   #zef stuff here
   - cd ..
@@ -61,7 +61,7 @@ artifacts:
     name: rakudo-daily-installer
 
 deploy:
-  tag: 0.01
+  tag: 0.02
   release: Rakudo latest and daily
   description: 'zip and executable version of rakudo latest-2019.11 and daily'
   provider: GitHub

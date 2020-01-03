@@ -1,9 +1,9 @@
 FROM debian:sid
 
-ENV LANG=en_US.UTF-8 \
-    LC_ALL=en_US.UTF-8 \
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
     TERM=xterm \
-    PANDOC=2.7.3 \
+    PANDOC=2.9.1 \
     RAKUDO=2019.11
 
 
@@ -30,11 +30,12 @@ RUN buildDeps="gcc \
     && rm -rf rakudo rakudo.tar.gz \
     && git clone https://github.com/ugexe/zef.git \
     && cd zef \
-    && perl6 -I. bin/zef install . && cd .. && rm -rf zef \
+    && raku -I. bin/zef install . && cd .. && rm -rf zef \
     && zef install Linenoise App::Mi6 App::Prove6 \
     && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
     && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb \
     && apt-get purge -y --auto-remove $buildDeps
+    
     
  #--no-install-recommends  
    
