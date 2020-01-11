@@ -5,9 +5,11 @@ services:
 
 before_install:
   - docker build -t sumankhanal/rakudo:daily rakudo-daily
-  - docker build -t sumankhanal/rakudo:latest rakudo-latest
+  - docker build -t sumankhanal/rakudo:2019.11 2019.11
+  - docker build -t sumankhanal/rakudo:2019.07.1 2019.07.1
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push sumankhanal/rakudo:daily
-  - docker push sumankhanal/rakudo:latest
+  - docker push sumankhanal/rakudo:2019.07.1
+  - docker push sumankhanal/rakudo:2019.11
