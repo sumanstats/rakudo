@@ -13,9 +13,9 @@ env:
 
 
 before_install:
-  - docker build -t {USER}/rakudo:{RAKU_VERSION} ${RAKU_VERSION}
+  - docker build -t ${USER}/rakudo:${RAKU_VERSION} ${RAKU_VERSION}
   
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push {USER}/rakudo:${RAKU_VERSION}
+  - docker push ${USER}/rakudo:${RAKU_VERSION}
