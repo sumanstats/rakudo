@@ -4,16 +4,18 @@ services:
   - docker
 
 env:
+  global:
+    - USER=sumankhanal
   matrix:
-    - RAKU_VER=daily
-    - RAKU_VER=2019.07.1
-    - RAKU_VER=2019.11
+    - RAKU_VERSION=daily
+    - RAKU_VERSION=2019.07.1
+    - RAKU_VERSION=2019.11
 
 
 before_install:
-  - docker build -t sumankhanal/rakudo:{RAKU_VER} ${RAKU_VER}
+  - docker build -t {USER}/rakudo:{RAKU_VERSION} ${RAKU_VERSION}
   
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push sumankhanal/rakudo:${RAKU_VER}
+  - docker push {USER}/rakudo:${RAKU_VERSION}
