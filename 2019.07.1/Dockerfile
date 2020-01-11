@@ -30,7 +30,7 @@ RUN buildDeps="gcc \
     && rm -rf rakudo rakudo.tar.gz \
     && git clone https://github.com/ugexe/zef.git \
     && cd zef \
-    && raku -I. bin/zef install . && cd .. && rm -rf zef \
+    && perl6 -I. bin/zef install . && cd .. && rm -rf zef \
     && zef install Linenoise App::Mi6 App::Prove6 \
     && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
     && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb \
@@ -39,4 +39,4 @@ RUN buildDeps="gcc \
     
  #--no-install-recommends  
    
-CMD ["raku", "--version"]
+CMD ["perl6", "--version"]
