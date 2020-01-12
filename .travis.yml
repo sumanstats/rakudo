@@ -19,3 +19,30 @@ before_install:
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ${USER}/rakudo:${RAKU_VERSION}
+  
+  
+  
+  # Running multiline commands inside docker containers in travis
+  # An example below
+  
+
+# language:
+#   - minimal
+
+# services:
+#   - docker
+
+# env:
+#   matrix:
+#     - RAKUDO_VERSION=daily
+#     - RAKUDO_VERSION=2019.11
+    
+ 
+
+# script: |
+#   docker run -it -v $(pwd):/home -w /home sumankhanal/rakudo:${RAKUDO_VERSION} /bin/sh -c "
+#   apt-get update && 
+#   apt-get install -y libzmq3-dev gcc make &&
+#   zef install --depsonly . &&
+#   prove6 --lib t/"
+
