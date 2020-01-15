@@ -22,7 +22,7 @@ build_script:
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo-2019.11 rakudo-2019.11.tar.gz
-  - SET PATH=C:\projects\rakudo\rakudo-old\bin;C:\projects\rakudo\rakudo-old\share\perl6\site\bin;%PATH%
+  - SET PATH=%APPVEYOR_BUILD_FOLDER%\rakudo-old\bin;%APPVEYOR_BUILD_FOLDER%\rakudo-old\share\perl6\site\bin;%PATH%
   - git clone https://github.com/ugexe/zef.git
   - cd zef
   - raku -I. bin/zef install .
@@ -40,7 +40,7 @@ test_script:
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
   - rm -rf rakudo
-  - SET PATH=C:\projects\rakudo\rakudo-new\bin;C:\projects\rakudo\rakudo-new\share\perl6\site\bin;%PATH%
+  - SET PATH=%APPVEYOR_BUILD_FOLDER%\rakudo-new\bin;%APPVEYOR_BUILD_FOLDER%\rakudo-new\share\perl6\site\bin;%PATH%
   - cd zef
   - raku -I. bin/zef install .
   - zef install App::Mi6 App::Prove6
@@ -60,7 +60,7 @@ artifacts:
     name: rakudo-daily-installer
 
 deploy:
-  tag: 0.021
+  tag: 0.022
   release: Rakudo latest and daily
   description: 'zip and executable version of rakudo 2019.11 and daily'
   provider: GitHub
