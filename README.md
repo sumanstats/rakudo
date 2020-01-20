@@ -10,18 +10,18 @@ Build two images in dockerhub: [offical release of rakudo](https://hub.docker.co
 | Docker Image Name | Description |  License |
 |-------------------|--------------|----------|
 |[![rakudo-daily](https://img.shields.io/badge/rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image directly from github daily | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-|[![rakudo-latest](https://img.shields.io/badge/rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+|[![rakudo-2019.11](https://img.shields.io/badge/rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 
 
 
-Both the images contain Rakudo interpreter along with module manager `zef`, raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing raku modules in Travis-CI or Appveyor.
+Both the images contain Rakudo interpreter along with module manager `zef`, raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing raku modules in Travis-CI or Appveyor or GitHub actions or Windows or anywhere container technology is supported.
 
 It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
 
 
 To run an image interactively, the command is:
 
-`docker run -it sumankhanal/rakudo:latest bash`.
+`docker run -it sumankhanal/rakudo:2019.11 bash`
 
 To build a raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
 
