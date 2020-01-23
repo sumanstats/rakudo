@@ -28,7 +28,7 @@ RUN buildDeps="gcc \
         && make && make install \
     ) \
     && rm -rf rakudo rakudo.tar.gz \
-    && git clone https://github.com/ugexe/zef.git \
+    && git clone -b master --single-branch https://github.com/ugexe/zef.git \
     && cd zef \
     && perl6 -I. bin/zef install . && cd .. && rm -rf zef \
     && zef install Linenoise App::Mi6 App::Prove6 \
