@@ -10,9 +10,8 @@ branches:
 
 
 
-before_install:
-  - cmd: set build=2020.01
-  
+
+
 install:
   - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"'
 #  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
@@ -21,6 +20,7 @@ install:
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
 
 build_script:
+  - cmd: set build=2020.01
   - wget https://github.com/rakudo/rakudo/releases/download/%build%/rakudo-%build%.tar.gz && tar -xzf rakudo-%build%.tar.gz
   - mkdir rakudo-old
   - cd rakudo-%build%/
