@@ -10,17 +10,14 @@ branches:
 
 
 
-
-
 install:
   - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"'
-#  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
   - appveyor-retry choco install strawberryperl --allow-empty-checksums
   - appveyor-retry choco install innosetup wget
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
-
+  - set build=2020.01
+  
 build_script:
-  - cmd: set build=2020.01
   - wget https://github.com/rakudo/rakudo/releases/download/%build%/rakudo-%build%.tar.gz && tar -xzf rakudo-%build%.tar.gz
   - mkdir rakudo-old
   - cd rakudo-%build%/
@@ -33,10 +30,9 @@ build_script:
   - cd zef
   - raku -I. bin/zef install .
   - zef install App::Mi6 App::Prove6
-  #zef stuff here
   - cd ..
   - 7z a rakudo-%build%-x86_64(JIT).zip ./rakudo-old/*
-  - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-${build}.iss
+  - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-%build%.iss
     
 test_script:
   - git clone -b master --single-branch https://github.com/rakudo/rakudo.git
