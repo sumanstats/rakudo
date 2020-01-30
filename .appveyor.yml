@@ -3,7 +3,7 @@ version: 1.0.{build}
 
 image: Visual Studio 2019
 
-version: 2020.01
+build: 2020.01
 
 branches:
   only:
@@ -18,13 +18,13 @@ install:
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Inno Setup 6\;%PATH%
 
 build_script:
-  - wget https://github.com/rakudo/rakudo/releases/download/${version}/rakudo-${version}.tar.gz && tar -xzf rakudo-${version}.tar.gz
+  - wget https://github.com/rakudo/rakudo/releases/download/${build}/rakudo-${build}.tar.gz && tar -xzf rakudo-${build}.tar.gz
   - mkdir rakudo-old
-  - cd rakudo-${version}/
+  - cd rakudo-${build}/
   - perl Configure.pl --gen-moar --gen-nqp --backends=moar --relocatable --prefix=%APPVEYOR_BUILD_FOLDER%/rakudo-old
   - nmake install
   - cd %APPVEYOR_BUILD_FOLDER%
-  - rm -rf rakudo-${version} rakudo-${version}.tar.gz
+  - rm -rf rakudo-${build} rakudo-${build}.tar.gz
   - SET PATH=%APPVEYOR_BUILD_FOLDER%\rakudo-old\bin;%APPVEYOR_BUILD_FOLDER%\rakudo-old\share\perl6\site\bin;%PATH%
   - git clone -b master --single-branch https://github.com/ugexe/zef.git
   - cd zef
@@ -32,8 +32,8 @@ build_script:
   - zef install App::Mi6 App::Prove6
   #zef stuff here
   - cd ..
-  - 7z a rakudo-${version}-x86_64(JIT).zip ./rakudo-old/*
-  - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-${version}.iss
+  - 7z a rakudo-${build}-x86_64(JIT).zip ./rakudo-old/*
+  - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-${build}.iss
     
 test_script:
   - git clone -b master --single-branch https://github.com/rakudo/rakudo.git
@@ -53,10 +53,10 @@ test_script:
   - iscc %APPVEYOR_BUILD_FOLDER%/rakudo-daily.iss
 
 artifacts:
-  - path: 'rakudo-${version}-x86_64(JIT).zip'
-    name: rakudo-${version}
-  - path: 'rakudo-${version}-x86_64(JIT).exe'
-    name: rakudo-${version}-installer
+  - path: 'rakudo-${build}-x86_64(JIT).zip'
+    name: rakudo-${build}
+  - path: 'rakudo-${build}-x86_64(JIT).exe'
+    name: rakudo-${build}-installer
   - path: 'rakudo-daily-x86_64(JIT).zip'
     name: rakudo-daily
   - path: 'rakudo-daily-x86_64(JIT).exe'
@@ -65,11 +65,11 @@ artifacts:
 deploy:
   tag: 2020.01
   release: Rakudo latest and daily
-  description: 'zip and executable version of rakudo 2020.01 and daily'
+  description: 'zip and executable build of rakudo 2020.01 and daily'
   provider: GitHub
   auth_token:
     secure: hy0QQSh7MfmaPRkoz382B7rQ4gkgfWlh0n2vfM9Lh0DU7ZidW/RQwo3MZSZJlpCh
-  artifact: rakudo-${version}, rakudo-${version}-installer, rakudo-daily, rakudo-daily-installer 
+  artifact: rakudo-${build}, rakudo-${build}-installer, rakudo-daily, rakudo-daily-installer 
   draft: false
   prerelease: false
   force_update: true
