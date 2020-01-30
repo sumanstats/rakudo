@@ -11,7 +11,7 @@ Build two images in dockerhub: [offical release of rakudo](https://hub.docker.co
 |-------------------|--------------|----------|
 |[![rakudo-daily](https://img.shields.io/badge/rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image directly from github daily | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 |[![rakudo-2019.11](https://img.shields.io/badge/rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-
+|[![rakudo-2020.01](https://img.shields.io/badge/rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 
 
 Both the images contain Rakudo interpreter along with module manager `zef`, raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing raku modules in Travis-CI or Appveyor or GitHub actions or Windows or anywhere container technology is supported.
