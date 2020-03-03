@@ -10,6 +10,7 @@ env:
     - RAKU_VERSION=daily
     - RAKU_VERSION=2019.11
     - RAKU_VERSION=2020.01
+    - RAKU_VERSION=2020.02.1
 
 
 before_install:
