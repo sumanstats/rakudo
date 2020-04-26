@@ -15,6 +15,7 @@ RUN buildDeps="gcc \
         libc6-dev \
         libencode-perl \
         wget \
+        libzstd-dev \
         make" \
     && apt-get update && apt-get install --yes --no-install-recommends $buildDeps \
     && apt-get install --yes curl git \
