@@ -1,20 +1,22 @@
-# Rakudo interpreter for raku programming language
+# Rakudo interpreter for Raku programming language
 
-[![raku](https://img.shields.io/badge/raku-v6.d-blue.svg)](https://raku.org/)
-[![Build Status](https://travis-ci.com/sumanstats/rakudo.svg?branch=master)](https://travis-ci.com/sumanstats/rakudo)
+> Docker images for **Raku**
 
-
-
-Build two images in dockerhub: [offical release of rakudo](https://hub.docker.com/r/sumankhanal/rakudo:latest) and [rakudo daily](https://hub.docker.com/r/sumankhanal/rakudo:daily) directly from github.
-
-| Docker Image Name | Description |  License |
-|-------------------|--------------|----------|
-|[![rakudo-daily](https://img.shields.io/badge/rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image directly from github daily | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-|[![rakudo-2019.11](https://img.shields.io/badge/rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-|[![rakudo-2020.01](https://img.shields.io/badge/rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds rakudo image from official release from rakudo team | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+[![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://raku.org/)
+[![Build Status](https://travis-ci.com/sumanstats/Rakudo.svg?branch=master)](https://travis-ci.com/sumanstats/rakudo)
 
 
-Both the images contain Rakudo interpreter along with module manager `zef`, raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing raku modules in Travis-CI or Appveyor or GitHub actions or Windows or anywhere container technology is supported.
+
+Builds two images in dockerhub: [offical release of Rakudo:latest](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:daily](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
+
+| Docker Image Name with tags                                                                                            | Description                                | License                                                                                                     |
+|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [![Rakudo-daily](https://img.shields.io/badge/Rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Builds Rakudo image directly from github   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+
+
+Both the images contain Rakudo interpreter along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or Windows or anywhere container technology is supported.
 
 It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
 
@@ -23,7 +25,7 @@ To run an image interactively, the command is:
 
 `docker run -it sumankhanal/rakudo:2019.11 bash`
 
-To build a raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
+To build a Raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
 
   ```raku
   mi6 new Sum::Doc
@@ -39,19 +41,20 @@ It will build the module with following folders and files within it:
   - README.md
   - dist.ini
   
-**Happy** building **raku modules** !!
+**Happy** building **Raku modules** !!
 
+*** 
 
 Side note:
 
-To get the sha256sum of the executable in a `.txt` file in `powershell`, execute the command:
+>To get the `sha256sum` of the executable in a `.txt` file in `powershell`, execute the command:
 
- ```
- Get-FileHash "executable" | Select -ExpandProperty Hash | Out-File -Encoding utf8 "txtfile" 
- ```
+>```
+>Get-FileHash "executable" | Select -ExpandProperty Hash | Out-File -Encoding utf8 "txtfile" 
+>```
  
  **OR**
  
- ```
-(Get-FileHash "executable").Hash | Out-File -Encoding utf8 "txtfile"
- ```
+>```
+>(Get-FileHash "executable").Hash | Out-File -Encoding utf8 "txtfile"
+>```
