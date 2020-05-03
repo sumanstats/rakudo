@@ -1,4 +1,4 @@
-# Rakudo interpreter for The Raku programming language
+# Rakudo interpreter for The Raku Programming Language
 
 > Docker images for **Raku**
 
