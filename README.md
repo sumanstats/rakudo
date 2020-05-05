@@ -7,23 +7,25 @@
 
 
 
-Builds two images in dockerhub: [offical release of Rakudo:latest](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:daily](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
+Builds Raku images in dockerhub: [offical releases of Rakudo](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:daily](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
 
-| Docker Image Name with tags                                                                                            | Description                                | License                                                                                                     |
-|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [![Rakudo-daily](https://img.shields.io/badge/Rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Builds Rakudo image directly from github   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| Docker Image Name with tags                                                                                                | Description                                | License                                                                                                     |
+|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [![Rakudo-daily](https://img.shields.io/badge/Rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)         | Builds Rakudo image directly from github   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-2020.02.1](https://img.shields.io/badge/Rakudo-2020.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-2020.05](https://img.shields.io/badge/Rakudo-2020.05-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Builds Rakudo image from official releases | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 
 
-Both the images contain Rakudo interpreter along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or Windows or anywhere container technology is supported.
+All the images contain Rakudo interpreter along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or Windows or anywhere container technology is supported.
 
 It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
 
 
 To run an image interactively, the command is:
 
-`docker run -it sumankhanal/rakudo:2019.11 bash`
+`docker run -it sumankhanal/rakudo:2020.02.1 bash`
 
 To build a Raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
 
