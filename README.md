@@ -1,12 +1,14 @@
-<h1>Rakudo interpreter for The Raku Programming Language<a href="https://raku.org/"><img src="https://github.com/sumanstats/rakudo/blob/master/imgs/raku_in_docker.png" width="140" height="110" style="float:right"></a></h1>
+# Rakudo interpreter for The Raku Programming Language
 
 > Docker images for **Raku**
 
 [![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://raku.org/)
 [![Build Status](https://travis-ci.com/sumanstats/Rakudo.svg?branch=master)](https://travis-ci.com/sumanstats/rakudo)
 
+<a href="https://raku.org/"><img src="https://github.com/sumanstats/rakudo/blob/master/imgs/raku_in_docker.png" width="160" height="130" align="right"></a>
 
 Builds Raku images in dockerhub: [offical releases of Rakudo](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:daily](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
+
 
 | Docker Image Name with tags                                                                                                | Description                                | License                                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------|
