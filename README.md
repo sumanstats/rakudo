@@ -1,4 +1,6 @@
-<h1>Rakudo interpreter for The Raku Programming Language<a href="https://raku.org/"><img src="https://github.com/sumanstats/rakudo/blob/master/imgs/raku_in_docker.png" width="140" height="110" style="float:right"></a></h1>
+# Rakudo interpreter for The Raku Programming Language
+
+<a href="https://raku.org/"><img src="https://github.com/sumanstats/rakudo/blob/master/imgs/raku_in_docker.png" width="140" height="110" align="right"></a>
 
 > Docker images for **Raku**
 
