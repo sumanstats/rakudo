@@ -8,9 +8,8 @@ env:
     - USER=sumankhanal
   matrix:
     - RAKU_VERSION=daily
-    - RAKU_VERSION=2020.01
     - RAKU_VERSION=2020.02.1
-    - RAKU_VERSION=2020.05
+    - RAKU_VERSION=2020.05.1
 
 
 before_install:
