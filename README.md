@@ -4,6 +4,8 @@
 
 [![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://raku.org/)
 [![Build Status](https://travis-ci.com/sumanstats/Rakudo.svg?branch=master)](https://travis-ci.com/sumanstats/rakudo)
+[![Last Commit](https://img.shields.io/github/last-commit/sumanstats/rakudo)](https://github.com/sumanstats/rakudo)
+
 
 <a href="https://raku.org/"><img src="https://i.imgur.com/Tkss808.png" width="190" height="120" align="right"></a>
 
@@ -44,7 +46,8 @@ It will build the module with following folders and files within it:
   - README.md
   - dist.ini
   
-**Happy** building **Raku modules** !!
+For **Raku** language questions and answers, go to: [![StackOverflow](https://img.shields.io/badge/stackoverflow-rcpp-orange.svg)](https://stackoverflow.com/questions/tagged/raku).
+
 
 *** 
 
