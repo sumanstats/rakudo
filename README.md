@@ -46,7 +46,7 @@ It will build the module with following folders and files within it:
   - README.md
   - dist.ini
   
-For **Raku** language questions and answers, go to: [![StackOverflow](https://img.shields.io/badge/stackoverflow-rcpp-orange.svg)](https://stackoverflow.com/questions/tagged/raku).
+For **Raku** language questions and answers, go to: [![StackOverflow](https://img.shields.io/badge/stackoverflow-raku-orange.svg)](https://stackoverflow.com/questions/tagged/raku).
 
 
 *** 
