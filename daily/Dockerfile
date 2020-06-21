@@ -3,7 +3,7 @@ FROM debian:sid
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TERM=xterm \
-    PANDOC=2.9.1
+    PANDOC=2.9.2.1
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
