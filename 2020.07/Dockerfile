@@ -4,7 +4,7 @@ ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TERM=xterm \
     PANDOC=2.10 \
-    RAKUDO=2020.06
+    RAKUDO=2020.07
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
