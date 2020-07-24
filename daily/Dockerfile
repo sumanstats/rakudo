@@ -3,7 +3,7 @@ FROM debian:testing
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TERM=xterm \
-    PANDOC=2.9.2.1
+    PANDOC=2.10
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
@@ -35,6 +35,6 @@ RUN buildDeps="gcc \
     && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb \
     && apt-get purge -y --auto-remove $buildDeps
 
-#For raku testing run ===> $ prove6 --lib t/
+#For raku testing run: prove6 --lib t/
     
 CMD ["raku", "--version"]
