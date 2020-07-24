@@ -3,7 +3,7 @@ FROM debian:testing
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TERM=xterm \
-    PANDOC=2.9.2.1 \
+    PANDOC=2.10 \
     RAKUDO=2020.02.1
 
 
