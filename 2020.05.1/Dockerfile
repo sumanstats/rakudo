@@ -3,7 +3,7 @@ FROM debian:testing
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TERM=xterm \
-    PANDOC=2.10 \
+    PANDOC=2.10.1 \
     RAKUDO=2020.05.1
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
