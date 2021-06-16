@@ -20,7 +20,7 @@ RUN buildDeps="gcc \
     && apt-get update && apt-get install --yes --no-install-recommends $buildDeps \
     && apt-get install --yes curl git \
     && rm -rf /var/lib/apt/lists/* \
-    && git clone -b master --single-branch https://github.com/rakudo/rakudo.git \
+    && git clone -b master --single-branch --recurse-submodules https://github.com/rakudo/rakudo.git \
     && ( \
         cd rakudo \
         && perl Configure.pl --prefix=/usr --gen-moar --gen-nqp \
