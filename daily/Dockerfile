@@ -3,7 +3,7 @@ FROM debian:testing
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TERM=xterm \
-    PANDOC=2.10
+    PANDOC=2.14.0.2
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
@@ -15,7 +15,8 @@ RUN buildDeps="gcc \
         libc6-dev \
         libencode-perl \
         wget \
-        libzstd-dev \
+        libzstd1 \
+	libzstd-dev \
         make" \
     && apt-get update && apt-get install --yes --no-install-recommends $buildDeps \
     && apt-get install --yes curl git \
@@ -41,5 +42,3 @@ RUN buildDeps="gcc \
 CMD ["raku", "--version"]
 
 
---gen-nqp \
-        --backends=moar --moar-option='--toolchain=gnu'
