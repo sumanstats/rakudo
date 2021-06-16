@@ -23,7 +23,8 @@ RUN buildDeps="gcc \
     && git clone -b master --single-branch https://github.com/rakudo/rakudo.git \
     && ( \
         cd rakudo \
-        && perl Configure.pl --prefix=/usr --gen-moar --backends=moar --relocatable \
+        && perl Configure.pl --prefix=/usr --gen-moar --gen-nqp \
+        --backends=moar --moar-option='--toolchain=gnu' --relocatable \
         && make && make install \
     ) \
     && rm -rf rakudo \
@@ -38,3 +39,7 @@ RUN buildDeps="gcc \
 #For raku testing run: prove6 --lib t/
     
 CMD ["raku", "--version"]
+
+
+--gen-nqp \
+        --backends=moar --moar-option='--toolchain=gnu'
