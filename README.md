@@ -3,7 +3,7 @@
 > Docker images for **Raku**
 
 [![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://raku.org/)
-[![Build Status](https://travis-ci.com/sumanstats/Rakudo.svg?branch=master)](https://travis-ci.com/sumanstats/rakudo)
+[![Build status](https://ci.appveyor.com/api/projects/status/jcu7g8cqao9mn3wj?svg=true)](https://ci.appveyor.com/project/sumanstats/rakudo)
 [![Last Commit](https://img.shields.io/github/last-commit/sumanstats/rakudo)](https://github.com/sumanstats/rakudo)
 
 
