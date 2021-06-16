@@ -6,13 +6,12 @@ environment:
   global:
     USER: sumankhanal
   matrix:
-    #- RAKU_VERSION: daily
+    - RAKU_VERSION: latest
     - RAKU_VERSION: 2020.12
     - RAKU_VERSION: 2021.02.1
     - RAKU_VERSION: 2021.05
 
 build_script:
-  - ps: docker build -t $env:USER/rakudo:daily -t $env:USER/rakudo:latest daily
   - ps: ./build.ps1
 
 deploy_script:

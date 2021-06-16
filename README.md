@@ -1,4 +1,4 @@
-# Rakudo interpreter for The Raku Programming Language
+# Rakudo compiler for The Raku Programming Language
 
 > Docker images for **Raku**
 
@@ -9,7 +9,7 @@
 
 <a href="https://raku.org/"><img src="https://i.imgur.com/Tkss808.png" width="190" height="120" align="right"></a>
 
-Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:daily](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
+Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:latest](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
 
 
 | Docker Image Name with tags                                                                                                | Description                                   | Image Size                                                                 | License                                                                                                     |
@@ -25,14 +25,15 @@ Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://hub.dock
 | [![Rakudo-2020.12](https://img.shields.io/badge/Rakudo-2020.12-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2020.12   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.12)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 | [![Rakudo-2021.02.1](https://img.shields.io/badge/Rakudo-2021.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2021.02.1 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.02.1) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 | [![Rakudo-2021.05](https://img.shields.io/badge/Rakudo-2021.05-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2021.05   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.05)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-daily](https://img.shields.io/badge/Rakudo-daily-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)         | Rakudo image directly from github             | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/daily)     | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Rakudo-latest](https://img.shields.io/badge/Rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)         | Rakudo image directly from github           | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/latest)    | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 
 
 
 
-All the images contain Rakudo compiler along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or anywhere container technology is supported.
+All the images contain Rakudo compiler along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or anywhere container technology is supported. It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
 
-It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
+
+**`Rakudo:latest`** is the bleeding edge version built directly from GitHub commits and is always recent than the released stable versions.
 
 
 To run an image interactively, the command is:
