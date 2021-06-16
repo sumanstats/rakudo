@@ -12,6 +12,7 @@ environment:
     - RAKU_VERSION: 2021.05
 
 build_script:
+  - ps: docker build -t $env:USER/rakudo:daily -t $env:USER/rakudo:latest daily
   - ps: ./build.ps1
 
 deploy_script:

@@ -30,7 +30,7 @@ Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://hub.dock
 
 
 
-All the images contain Rakudo interpreter along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or anywhere container technology is supported.
+All the images contain Rakudo compiler along with module manager `zef`, Raku module writing tool [App::Mi6](https://github.com/skaji/mi6) and testing framework `App::Prove6`. These images thus can be used for testing Raku modules in Travis-CI or Appveyor or GitHub actions or anywhere container technology is supported.
 
 It also includes [Pandoc](https://pandoc.org/index.html) for reproducible research.
 
