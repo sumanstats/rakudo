@@ -5,27 +5,29 @@
 [![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://raku.org/)
 [![Build status](https://ci.appveyor.com/api/projects/status/jcu7g8cqao9mn3wj?svg=true)](https://ci.appveyor.com/project/sumanstats/rakudo)
 [![Last Commit](https://img.shields.io/github/last-commit/sumanstats/rakudo)](https://github.com/sumanstats/rakudo)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 <a href="https://raku.org/"><img src="https://i.imgur.com/Tkss808.png" width="190" height="120" align="right"></a>
 
-Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://hub.docker.com/r/sumankhanal/rakudo) (stable version) and [Rakudo:latest](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
+Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://github.com/rakudo/rakudo/releases) (stable version) and [Rakudo:latest](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
+ 
+
+ 
+ **Docker images available with their tags**
+
+  | <!-- -->                                                                                                               | <!-- -->                                                                                                                   | <!-- -->                                                                                                                   | <!-- -->                                                                                                                   |
+  | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+  | [![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | [![Rakudo-2020.02.1](https://img.shields.io/badge/Rakudo-2020.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.05.1](https://img.shields.io/badge/Rakudo-2020.05.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) |
+  | [![Rakudo-2020.06](https://img.shields.io/badge/Rakudo-2020.06-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.07](https://img.shields.io/badge/Rakudo-2020.07-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | [![Rakudo-2020.08.2](https://img.shields.io/badge/Rakudo-2020.08.2-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.09](https://img.shields.io/badge/Rakudo-2020.09-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     |
+  | [![Rakudo-2020.12](https://img.shields.io/badge/Rakudo-2020.12-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2021.02.1](https://img.shields.io/badge/Rakudo-2021.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2021.05](https://img.shields.io/badge/Rakudo-2021.05-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     |                                                                                                                            |
 
 
-| Docker Image Name with tags                                                                                                | Description                                   | Image Size                                                                 | License                                                                                                     |
-|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2019.11   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2019.11)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2020.01   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.01)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.02.1](https://img.shields.io/badge/Rakudo-2020.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2020.02.1 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.02.1) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.05.1](https://img.shields.io/badge/Rakudo-2020.05.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2020.05.1 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.05.1) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.06](https://img.shields.io/badge/Rakudo-2020.06-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2020.06   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.06)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.07](https://img.shields.io/badge/Rakudo-2020.07-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2020.07   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.07)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.08.2](https://img.shields.io/badge/Rakudo-2020.08.2-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2020.08.2 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.08.2) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.09](https://img.shields.io/badge/Rakudo-2020.09-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2020.09   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.09)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2020.12](https://img.shields.io/badge/Rakudo-2020.12-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2020.12   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2020.12)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2021.02.1](https://img.shields.io/badge/Rakudo-2021.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2021.02.1 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.02.1) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-2021.05](https://img.shields.io/badge/Rakudo-2021.05-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | Rakudo image from official release v2021.05   | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.05)   | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| [![Rakudo-latest](https://img.shields.io/badge/Rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)         | Rakudo image directly from github           | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/latest)    | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+----
+
+| Latest images                                                                                                          | Description                                 | Image size                                                               |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------ |
+| [![Rakudo-2021.06](https://img.shields.io/badge/Rakudo-2021.06-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2021.06 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.06) |
+| [![Rakudo-latest](https://img.shields.io/badge/Rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)   | Rakudo image directly from github           | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/latest)  |
 
 
 
@@ -38,7 +40,7 @@ All the images contain Rakudo compiler along with module manager `zef`, Raku mod
 
 To run an image interactively, the command is:
 
-`docker run -it sumankhanal/rakudo:2021.05 bash`
+`docker run -it sumankhanal/rakudo:2021.06 bash`
 
 To build a Raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
 
