@@ -7,9 +7,8 @@ environment:
     USER: sumankhanal
   matrix:
     - RAKU_VERSION: latest
-    #- RAKU_VERSION: 2020.12
-    #- RAKU_VERSION: 2021.02.1
     - RAKU_VERSION: 2021.06
+    - RAKU_VERSION: 2021.09
 
 build_script:
   - ps: ./build.ps1
