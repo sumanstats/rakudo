@@ -1,19 +1,27 @@
-FROM debian:testing
+FROM debian:bullseye AS builder
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    TERM=xterm \
-    PANDOC=2.14.2 \
-    RAKUDO=2021.09
+    PANDOC=2.14.2
 
-ENV PATH=$PATH:/usr/share/perl6/site/bin
+RUN apt-get update \
+  && apt-get install -y wget \
+  && rm -rf /var/lib/apt/lists/* \
+  && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
+  && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb
+  
+
+FROM builder AS build1
+
+ENV TERM=xterm \
+    RAKUDO=2021.09 \
+    PATH=$PATH:/usr/share/perl6/site/bin
 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
       
 RUN buildDeps="gcc \
         libc6-dev \
         libencode-perl \
-        wget \
         libzstd-dev \
         make" \
     && apt-get update && apt-get install -y --no-install-recommends $buildDeps \
@@ -33,11 +41,9 @@ RUN buildDeps="gcc \
     && cd zef \
     && raku -I. bin/zef install . && cd .. && rm -rf zef \
     && zef install Linenoise App::Mi6 App::Prove6 \
-    && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
-    && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb \
     && apt-get purge -y --auto-remove $buildDeps
     
     
- #--no-install-recommends  
+ #--no-install-recommends
    
 CMD ["raku", "--version"]
