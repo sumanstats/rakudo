@@ -10,23 +10,24 @@
 <a href="https://raku.org/"><img src="https://i.imgur.com/Tkss808.png" width="190" height="120" align="right"></a>
 
 Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://github.com/rakudo/rakudo/releases) (stable version) and [Rakudo:latest](https://hub.docker.com/r/sumankhanal/rakudo) (unstable version) directly from github.
- 
+
 
  
  **Docker images available with their tags**
 
-  | <!-- -->                                                                                                               | <!-- -->                                                                                                                   | <!-- -->                                                                                                                   | <!-- -->                                                                                                                   |
-  | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-  | [![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | [![Rakudo-2020.02.1](https://img.shields.io/badge/Rakudo-2020.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.05.1](https://img.shields.io/badge/Rakudo-2020.05.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) |
-  | [![Rakudo-2020.06](https://img.shields.io/badge/Rakudo-2020.06-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.07](https://img.shields.io/badge/Rakudo-2020.07-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | [![Rakudo-2020.08.2](https://img.shields.io/badge/Rakudo-2020.08.2-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2020.09](https://img.shields.io/badge/Rakudo-2020.09-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     |
-  | [![Rakudo-2020.12](https://img.shields.io/badge/Rakudo-2020.12-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2021.02.1](https://img.shields.io/badge/Rakudo-2021.02.1-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | [![Rakudo-2021.05](https://img.shields.io/badge/Rakudo-2021.05-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     | [![Rakudo-2021.06](https://img.shields.io/badge/Rakudo-2021.06-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)     |
+  | <!-- -->                                                                | <!-- -->                                                                    | <!-- -->                                                                    | <!-- -->                                                                    |
+  | ----------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+  | ![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg) | ![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)     | ![Rakudo-2020.02.1](https://img.shields.io/badge/Rakudo-2020.02.1-blue.svg) | ![Rakudo-2020.05.1](https://img.shields.io/badge/Rakudo-2020.05.1-blue.svg) |
+  | ![Rakudo-2020.06](https://img.shields.io/badge/Rakudo-2020.06-blue.svg) | ![Rakudo-2020.07](https://img.shields.io/badge/Rakudo-2020.07-blue.svg)     | ![Rakudo-2020.08.2](https://img.shields.io/badge/Rakudo-2020.08.2-blue.svg) | ![Rakudo-2020.09](https://img.shields.io/badge/Rakudo-2020.09-blue.svg)     |
+  | ![Rakudo-2020.12](https://img.shields.io/badge/Rakudo-2020.12-blue.svg) | ![Rakudo-2021.02.1](https://img.shields.io/badge/Rakudo-2021.02.1-blue.svg) | ![Rakudo-2021.05](https://img.shields.io/badge/Rakudo-2021.05-blue.svg)     | ![Rakudo-2021.06](https://img.shields.io/badge/Rakudo-2021.06-blue.svg)     |
+  | ![Rakudo-2021.09](https://img.shields.io/badge/Rakudo-2021.09-blue.svg) |                                                                             |                                                                             |
 
 
 ----
 
 | Latest images                                                                                                          | Description                                 | Image size                                                               |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------ |
-| [![Rakudo-2021.09](https://img.shields.io/badge/Rakudo-2021.09-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2021.09 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.09) |
+| [![Rakudo-2021.12](https://img.shields.io/badge/Rakudo-2021.12-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2021.12 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2021.12) |
 | [![Rakudo-latest](https://img.shields.io/badge/Rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)   | Rakudo image directly from github           | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/latest)  |
 
 
@@ -40,7 +41,7 @@ All the images contain Rakudo compiler along with module manager `zef`, Raku mod
 
 To run an image interactively, the command is:
 
-`docker run -it sumankhanal/rakudo:2021.06 bash`
+`docker run -it sumankhanal/rakudo:2021.12 bash`
 
 To build a Raku module like  `Sum::Doc ` type the following commands in the terminal of container of this image:
 
