@@ -2,7 +2,7 @@ FROM debian:bullseye AS builder
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PANDOC=2.14.2
+    PANDOC=2.19
 
 RUN apt-get update \
   && apt-get install -y wget \
