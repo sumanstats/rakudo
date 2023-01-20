@@ -10,13 +10,8 @@ on:
     - cron: '0 0 * * *'
   push:
     branches: [ "main" ]
-    # Publish semver tags as releases.
-    tags: [ 'daily' ]
   pull_request:
     branches: [ "main" ]
-
-env:
-  IMAGE_NAME: "sumankhanal/rakudo"
 
 
 jobs:
@@ -33,7 +28,7 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: $IMAGE_NAME
+          name: sumankhanal/rakudo
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           workdir: latest
