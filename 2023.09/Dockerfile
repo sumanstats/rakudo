@@ -1,4 +1,4 @@
-FROM debian:bullseye AS builder
+FROM debian:bookworm AS builder
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
@@ -13,37 +13,37 @@ RUN apt-get update \
 
 FROM builder AS build1
 
-
 ENV TERM=xterm \
+    RAKUDO=2023.09 \
     PATH=$PATH:/usr/share/perl6/site/bin
 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
-
       
 RUN buildDeps="gcc \
         libc6-dev \
         libencode-perl \
         libzstd-dev \
         make" \
-    && apt-get update && apt-get install --yes --no-install-recommends $buildDeps \
-    && apt-get install --yes curl git \
+    && apt-get update && apt-get install -y --no-install-recommends $buildDeps \
+    && apt-get install -y git nano curl \
     && rm -rf /var/lib/apt/lists/* \
-    && git clone -b main --single-branch --recurse-submodules https://github.com/rakudo/rakudo.git \
+    && mkdir rakudo \
+    && wget -O rakudo.tar.gz https://github.com/rakudo/rakudo/releases/download/${RAKUDO}/rakudo-${RAKUDO}.tar.gz \
+    && tar xzf rakudo.tar.gz --strip-components=1 -C rakudo \
     && ( \
         cd rakudo \
         && perl Configure.pl --prefix=/usr --gen-moar --gen-nqp \
         --backends=moar --moar-option='--toolchain=gnu' --relocatable \
         && make && make install \
     ) \
-    && rm -rf rakudo \
+    && rm -rf rakudo rakudo.tar.gz \
     && git clone -b main --single-branch https://github.com/ugexe/zef.git \
     && cd zef \
     && raku -I. bin/zef install . && cd .. && rm -rf zef \
     && zef install Linenoise App::Mi6 App::Prove6 \
     && apt-get purge -y --auto-remove $buildDeps
-
-#For raku testing run: prove6 --lib t/
     
+    
+ #--no-install-recommends
+   
 CMD ["raku", "--version"]
-
-

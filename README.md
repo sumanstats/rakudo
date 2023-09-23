@@ -20,14 +20,14 @@ Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://github.c
   | ![Rakudo-2019.11](https://img.shields.io/badge/Rakudo-2019.11-blue.svg) | ![Rakudo-2020.01](https://img.shields.io/badge/Rakudo-2020.01-blue.svg)     | ![Rakudo-2020.02.1](https://img.shields.io/badge/Rakudo-2020.02.1-blue.svg) | ![Rakudo-2020.05.1](https://img.shields.io/badge/Rakudo-2020.05.1-blue.svg) |
   | ![Rakudo-2020.06](https://img.shields.io/badge/Rakudo-2020.06-blue.svg) | ![Rakudo-2020.07](https://img.shields.io/badge/Rakudo-2020.07-blue.svg)     | ![Rakudo-2020.08.2](https://img.shields.io/badge/Rakudo-2020.08.2-blue.svg) | ![Rakudo-2020.09](https://img.shields.io/badge/Rakudo-2020.09-blue.svg)     |
   | ![Rakudo-2020.12](https://img.shields.io/badge/Rakudo-2020.12-blue.svg) | ![Rakudo-2021.02.1](https://img.shields.io/badge/Rakudo-2021.02.1-blue.svg) | ![Rakudo-2021.05](https://img.shields.io/badge/Rakudo-2021.05-blue.svg)     | ![Rakudo-2021.06](https://img.shields.io/badge/Rakudo-2021.06-blue.svg)     |
-  | ![Rakudo-2021.09](https://img.shields.io/badge/Rakudo-2021.09-blue.svg) | ![Rakudo-2021.12](https://img.shields.io/badge/Rakudo-2021.12-blue.svg) |    ![Rakudo-2022.07](https://img.shields.io/badge/Rakudo-2022.07-blue.svg)      |                                                                             |
+  | ![Rakudo-2021.09](https://img.shields.io/badge/Rakudo-2021.09-blue.svg) | ![Rakudo-2021.12](https://img.shields.io/badge/Rakudo-2021.12-blue.svg) |    ![Rakudo-2022.07](https://img.shields.io/badge/Rakudo-2022.07-blue.svg)      | ![Rakudo-2022.12](https://img.shields.io/badge/Rakudo-2022.12-blue.svg)     |
 
 
 ----
 
 | Latest images                                                                                                          | Description                                 | Image size                                                               |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------ |
-| [![Rakudo-2022.12](https://img.shields.io/badge/Rakudo-2022.12-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2022.12 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2022.12) |
+| [![Rakudo-2023.09](https://img.shields.io/badge/Rakudo-2023.09-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2023.09 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2023.09) |
 | [![Rakudo-latest](https://img.shields.io/badge/Rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)   | Rakudo image directly from github           | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/latest)  |
 
 
@@ -41,7 +41,7 @@ All the images contain Rakudo compiler along with module manager `zef`, Raku mod
 
 To run an image interactively, the command is:
 
-`docker run -it sumankhanal/rakudo:2022.12 bash`
+`docker run -it sumankhanal/rakudo:2023.09 bash`
 
 To build a Raku module like  `Sum::Doc` type the following commands in the terminal of container of this image:
 
