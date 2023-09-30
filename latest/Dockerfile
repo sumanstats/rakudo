@@ -1,4 +1,4 @@
-FROM debian:bullseye AS builder
+FROM debian:trixie AS builder
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
