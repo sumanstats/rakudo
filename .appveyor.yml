@@ -1,13 +1,17 @@
 version: 1.0.{build}
 image:
 - Ubuntu
+branches:
+  only:
+    # - main
+    - debian-unstable
 
 environment:
   global:
     USER: sumankhanal
   matrix:
     - RAKU_VERSION: latest
-    - RAKU_VERSION: 2023.09
+    - RAKU_VERSION: 2024.06
 
 build_script:
   - ps: ./build.ps1
