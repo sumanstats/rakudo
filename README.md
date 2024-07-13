@@ -23,11 +23,13 @@ Builds Rakudo images in dockerhub: [offical releases of Rakudo](https://github.c
   | ![Rakudo-2021.09](https://img.shields.io/badge/Rakudo-2021.09-blue.svg) | ![Rakudo-2021.12](https://img.shields.io/badge/Rakudo-2021.12-blue.svg) |    ![Rakudo-2022.07](https://img.shields.io/badge/Rakudo-2022.07-blue.svg)      | ![Rakudo-2022.12](https://img.shields.io/badge/Rakudo-2022.12-blue.svg)     |
 
 
+Find rest of the tags in the `Tags` heading in dockerhub.
+
 ----
 
 | Latest images                                                                                                          | Description                                 | Image size                                                               |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------ |
-| [![Rakudo-2023.09](https://img.shields.io/badge/Rakudo-2023.09-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2023.09 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2023.09) |
+| [![Rakudo-2024.06](https://img.shields.io/badge/Rakudo-2024.06-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo) | Rakudo image from official release v2024.06 | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/2024.06) |
 | [![Rakudo-latest](https://img.shields.io/badge/Rakudo-latest-blue.svg)](https://hub.docker.com/r/sumankhanal/rakudo)   | Rakudo image directly from github           | ![](https://img.shields.io/docker/image-size/sumankhanal/rakudo/latest)  |
 
 
@@ -41,7 +43,7 @@ All the images contain Rakudo compiler along with module manager `zef`, Raku mod
 
 To run an image interactively, the command is:
 
-`docker run -it sumankhanal/rakudo:2023.09 bash`
+`docker run -it sumankhanal/rakudo:2024.06 bash`
 
 To build a Raku module like  `Sum::Doc` type the following commands in the terminal of container of this image:
 
